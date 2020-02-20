@@ -56,11 +56,8 @@ export const Quiz = () => {
 
   return (
     <QuizWrapper>
-      <span className="title">
-        Tell Us Your Favorite Foods And We'll Guess What Type Of Personality You
-        Have
-      </span>
-      <img src="/images/personality.gif" className="gif" />
+      <span className="title">{quizData.title}</span>
+      <img src={quizData.imgUrl} className="gif" />
       {quizData.questions.map(renderQuestions)}
       {result && (
         <Result

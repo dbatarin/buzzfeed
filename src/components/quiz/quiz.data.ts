@@ -1,6 +1,7 @@
 export interface QuizData {
   id: string;
   title: string;
+  imgUrl: string;
   questions: QuizQuestion[];
   results: string[];
 }
@@ -20,6 +21,7 @@ export const quizData: QuizData = {
   id: "b84bae6e-53c7-11ea-8d77-2e728ce88125",
   title:
     "Tell Us Your Favorite Foods And We'll Guess What Type Of Personality You Have",
+  imgUrl: "/images/personality.gif",
   questions: [
     {
       id: "b84bb18e-53c7-11ea-8d77-2e728ce88125",
