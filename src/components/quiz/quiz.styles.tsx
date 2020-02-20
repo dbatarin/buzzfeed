@@ -18,5 +18,6 @@ export const QuizWrapper = styled.div`
     margin: 0 auto;
     display: block;
     margin-bottom: 16px;
+    width: 100%;
   }
 `;
