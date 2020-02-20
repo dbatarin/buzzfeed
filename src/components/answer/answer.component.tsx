@@ -8,7 +8,7 @@ interface AnswerProps {
   questionId: string;
   isSelected: boolean;
   isDisabled: boolean;
-  handleChange: (field: string, value: any) => void;
+  handleChange: (field: string, value: any, weight: number) => void;
 }
 
 export const Answer: React.FC<AnswerProps> = ({
@@ -19,7 +19,7 @@ export const Answer: React.FC<AnswerProps> = ({
   isDisabled
 }) => {
   const onChange = useCallback(() => {
-    handleChange(questionId, data.id);
+    handleChange(questionId, data.id, data.weight);
   }, []);
 
   return (

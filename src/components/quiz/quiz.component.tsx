@@ -5,34 +5,43 @@ import { QuizWrapper } from "./quiz.styles";
 import { quizData } from "./quiz.data";
 import { Question } from "../question/question.component";
 import { Result } from "../result/result.component";
-import { getRandomInt } from "../../utils/numbers";
-import { QuizQuestion, FormikValues } from "./quiz.types";
+import { QuizQuestion, QuizFormValues } from "./quiz.types";
 
 export const Quiz = () => {
   const [result, setResult] = useState<string | null>(null);
+  const [weight, setWeight] = useState<number>(0);
 
-  const formik = useFormik<FormikValues>({
+  const formik = useFormik<QuizFormValues>({
     initialValues: {},
     onSubmit: () => {
-      const randomInt = getRandomInt(quizData.results.length - 1);
-      setResult(quizData.results[randomInt]);
+      const findResult = quizData.results.find(
+        r => weight >= r.min && weight <= r.max
+      );
+
+      setResult(
+        findResult
+          ? findResult.title
+          : "Ooops! Something wrong with our calculations :("
+      );
     }
   });
 
   const handleChange = useCallback(
-    (field: string, value: any) => {
+    (field: string, value: any, answerWeight: number) => {
       formik.setFieldValue(field, value);
+      setWeight(weight + answerWeight);
 
       if (Object.keys(formik.values).length + 1 === quizData.questions.length) {
         formik.submitForm();
       }
     },
-    [formik.values]
+    [formik.values, weight]
   );
 
   const retakeQuiz = useCallback(() => {
     formik.resetForm();
     setResult(null);
+    setWeight(0);
   }, []);
 
   const renderQuestions = useCallback(

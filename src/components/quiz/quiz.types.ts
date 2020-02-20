@@ -1,4 +1,4 @@
-export interface FormikValues {
+export interface QuizFormValues {
   [key: string]: string;
 }
 
@@ -7,7 +7,7 @@ export interface QuizData {
   title: string;
   imgUrl: string;
   questions: QuizQuestion[];
-  results: string[];
+  results: QuizResult[];
 }
 
 export interface QuizQuestion {
@@ -19,4 +19,11 @@ export interface QuizQuestion {
 export interface QuizQuestionAnswer {
   id: string;
   value: string;
+  weight: number;
+}
+
+export interface QuizResult {
+  title: string;
+  min: number;
+  max: number;
 }

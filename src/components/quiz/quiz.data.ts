@@ -12,19 +12,23 @@ export const quizData: QuizData = {
       answers: [
         {
           id: "b84bb2ec-53c7-11ea-8d77-2e728ce88125",
-          value: "caesar salad"
+          value: "caesar salad",
+          weight: 1
         },
         {
           id: "b84bb594-53c7-11ea-8d77-2e728ce88125",
-          value: "nuggets"
+          value: "nuggets",
+          weight: 2
         },
         {
           id: "b84bb706-53c7-11ea-8d77-2e728ce88125",
-          value: "burger"
+          value: "burger",
+          weight: 3
         },
         {
           id: "b84bb94a-53c7-11ea-8d77-2e728ce88125",
-          value: "chicken sandwich"
+          value: "chicken sandwich",
+          weight: 4
         }
       ]
     },
@@ -34,19 +38,23 @@ export const quizData: QuizData = {
       answers: [
         {
           id: "b84bbc92-53c7-11ea-8d77-2e728ce88125",
-          value: "fruit"
+          value: "fruit",
+          weight: 1
         },
         {
           id: "b84bbddc-53c7-11ea-8d77-2e728ce88125",
-          value: "salad"
+          value: "salad",
+          weight: 2
         },
         {
           id: "b84bc016-53c7-11ea-8d77-2e728ce88125",
-          value: "parfrait"
+          value: "parfrait",
+          weight: 3
         },
         {
           id: "b84bc160-53c7-11ea-8d77-2e728ce88125",
-          value: "pasta salad"
+          value: "pasta salad",
+          weight: 4
         }
       ]
     },
@@ -56,19 +64,23 @@ export const quizData: QuizData = {
       answers: [
         {
           id: "b84bc46c-53c7-11ea-8d77-2e728ce88125",
-          value: "M&M’s"
+          value: "M&M’s",
+          weight: 1
         },
         {
           id: "b84bc688-53c7-11ea-8d77-2e728ce88125",
-          value: "caramel popcorn"
+          value: "caramel popcorn",
+          weight: 2
         },
         {
           id: "b84bc7c8-53c7-11ea-8d77-2e728ce88125",
-          value: "traditional popcorn"
+          value: "traditional popcorn",
+          weight: 3
         },
         {
           id: "b84bc8f4-53c7-11ea-8d77-2e728ce88125",
-          value: "ice cream"
+          value: "ice cream",
+          weight: 4
         }
       ]
     },
@@ -78,19 +90,23 @@ export const quizData: QuizData = {
       answers: [
         {
           id: "b84bcd0e-53c7-11ea-8d77-2e728ce88125",
-          value: "Dunkin’ Donuts"
+          value: "Dunkin’ Donuts",
+          weight: 1
         },
         {
           id: "b84bce4e-53c7-11ea-8d77-2e728ce88125",
-          value: "Wendy’s"
+          value: "Wendy’s",
+          weight: 2
         },
         {
           id: "b84bcf7a-53c7-11ea-8d77-2e728ce88125",
-          value: "Burger King"
+          value: "Burger King",
+          weight: 3
         },
         {
           id: "b84bd114-53c7-11ea-8d77-2e728ce88125",
-          value: "McDonald’s"
+          value: "McDonald’s",
+          weight: 4
         }
       ]
     },
@@ -100,27 +116,48 @@ export const quizData: QuizData = {
       answers: [
         {
           id: "b84bd402-53c7-11ea-8d77-2e728ce88125",
-          value: "pasta"
+          value: "pasta",
+          weight: 1
         },
         {
           id: "b84bd5ec-53c7-11ea-8d77-2e728ce88125",
-          value: "chicken"
+          value: "chicken",
+          weight: 2
         },
         {
           id: "b84bd72c-53c7-11ea-8d77-2e728ce88125",
-          value: "sandwich"
+          value: "sandwich",
+          weight: 3
         },
         {
           id: "b84bd8b2-53c7-11ea-8d77-2e728ce88125",
-          value: "pizza"
+          value: "pizza",
+          weight: 4
         }
       ]
     }
   ],
   results: [
-    "Stern - You're a very serious person!",
-    "Funny - You have a wicked sense of humour!",
-    "Outgoing - You're a perfect mix of funny, chill, and intelligence!",
-    "Shy - You're shy and reserved!"
+    {
+      title: "Stern - You're a very serious person!",
+      min: 5,
+      max: 8
+    },
+    {
+      title: "Funny - You have a wicked sense of humour!",
+      min: 9,
+      max: 12
+    },
+    {
+      title:
+        "Outgoing - You're a perfect mix of funny, chill, and intelligence!",
+      min: 13,
+      max: 16
+    },
+    {
+      title: "Shy - You're shy and reserved!",
+      min: 17,
+      max: 20
+    }
   ]
 };

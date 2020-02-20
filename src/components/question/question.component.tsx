@@ -6,7 +6,7 @@ import { Answer } from "../answer/answer.component";
 
 interface QuestionProps {
   data: QuizQuestion;
-  handleChange: (field: string, value: any) => void;
+  handleChange: (field: string, value: any, weight: number) => void;
   value?: string;
 }
 
