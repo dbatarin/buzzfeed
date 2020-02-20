@@ -1,6 +1,6 @@
 import React, { useCallback } from "react";
 
-import { QuizQuestionAnswer } from "../quiz/quiz.data";
+import { QuizQuestionAnswer } from "../quiz/quiz.types";
 import { AnswerLabel } from "./answer.styles";
 
 interface AnswerProps {

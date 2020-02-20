@@ -1,21 +1,4 @@
-export interface QuizData {
-  id: string;
-  title: string;
-  imgUrl: string;
-  questions: QuizQuestion[];
-  results: string[];
-}
-
-export interface QuizQuestion {
-  id: string;
-  title: string;
-  answers: QuizQuestionAnswer[];
-}
-
-export interface QuizQuestionAnswer {
-  id: string;
-  value: string;
-}
+import { QuizData } from "./quiz.types";
 
 export const quizData: QuizData = {
   id: "b84bae6e-53c7-11ea-8d77-2e728ce88125",

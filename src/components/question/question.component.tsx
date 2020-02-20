@@ -1,6 +1,6 @@
 import React, { useCallback } from "react";
 
-import { QuizQuestion, QuizQuestionAnswer } from "../quiz/quiz.data";
+import { QuizQuestion, QuizQuestionAnswer } from "../quiz/quiz.types";
 import { QuestionWrapper } from "./question.styles";
 import { Answer } from "../answer/answer.component";
 

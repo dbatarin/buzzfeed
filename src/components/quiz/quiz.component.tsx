@@ -2,14 +2,11 @@ import React, { useCallback, useState } from "react";
 import { useFormik } from "formik";
 
 import { QuizWrapper } from "./quiz.styles";
-import { quizData, QuizQuestion } from "./quiz.data";
+import { quizData } from "./quiz.data";
 import { Question } from "../question/question.component";
 import { Result } from "../result/result.component";
 import { getRandomInt } from "../../utils/numbers";
-
-interface FormikValues {
-  [key: string]: string;
-}
+import { QuizQuestion, FormikValues } from "./quiz.types";
 
 export const Quiz = () => {
   const [result, setResult] = useState<string | null>(null);
@@ -61,9 +58,10 @@ export const Quiz = () => {
       {quizData.questions.map(renderQuestions)}
       {result && (
         <Result
-          title={quizData.title}
           result={result}
           retakeQuiz={retakeQuiz}
+          quizData={quizData}
+          values={formik.values}
         />
       )}
     </QuizWrapper>
